@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# AI-Powered Knowledge Graph Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+The AI-Powered Knowledge Graph Builder is a full-stack web application designed to process unstructured text documents and transform them into interactive Knowledge Graphs. It extracts key entities and their relationships using natural language processing and visualizes them dynamically, allowing users to explore structured connections within their data.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
+* Document Ingestion: Allows users to upload plain text and documents for entity extraction.
+* Automatic Graph Generation: Extracts relationships and entities from text to build connected knowledge nodes.
+* Dynamic Visualizations: Displays interactive node-and-edge network graphs using Cytoscape.js.
+* Graph Database Integration: Stores graph structures and relationships efficiently in a Neo4j database.
+* Full-Stack API Architecture: Connects a React user interface with a FastAPI backend.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+* Frontend: React.js, Cytoscape.js, CSS3
+* Backend: Python, FastAPI, Uvicorn
+* Database: Neo4j
+* Language Processing: Python NLP libraries and embeddings
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Repository Structure
+* backend/ - Contains FastAPI routes, NLP processing scripts, and database utility modules.
+* frontend/ - Contains React source code, user interface components, and styling.
+* database/ - Holds graph database configuration and schema setups.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+* Node.js (v16 or higher)
+* Python (v3.10 or higher)
+* Neo4j Database (Local or AuraDB)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend Setup
 
-### `npm run eject`
+1. Navigate to the backend directory:
+   cd backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Activate your virtual environment:
+   # Windows PowerShell:
+   ..\.venv\Scripts\Activate.ps1
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install required Python packages:
+   pip install -r requirements.txt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the backend server:
+   uvicorn main:app --reload --port 8000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### Frontend Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Open a new terminal and navigate to the frontend directory:
+   cd frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies:
+   npm install
 
-### Code Splitting
+3. Run the development server:
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Open http://localhost:3000 in your browser to view the application.
